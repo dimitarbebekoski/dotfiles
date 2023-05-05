@@ -1,0 +1,15 @@
+bindsym mod4+grave exec alacritty
+bindsym mod4+slash exec alacritty -e htop
+
+bindsym mod4+t exec teams
+bindsym mod4+i exec sxiv ~/img/*
+bindsym mod4+backslash exec torbrowser-launcher
+bindsym --locked mod4+a exec bluetoothctl power on && bluetoothctl connect CD:5D:1B:31:63:46
+bindsym --locked mod4+shift+a exec bluetoothctl disconnect && bluetoothctl power off
+bindsym mod4+s exec pavucontrol -t 3
+bindsym mod4+backspace exec swaylock
+bindsym mod4+z exec zathura
+bindsym mod4+v exec viber
+bindsym mod4+b exec firefox --new-tab about:newtab
+
+bindsym mod4+shift+f12 exec shutdown now

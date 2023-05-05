@@ -1,0 +1,25 @@
+# shellcheck source=/home/dimitar/.config/bash/sources/bash_aliases
+
+[[ $- != *i* ]] && return # If not running interactively, don't do anything
+
+source_files_in_directory() {
+  local src
+
+  for src in "$1"/*; do
+    [ -s "$src" ] && . "$src"
+  done
+}
+
+source_directory() {
+  local -r srcs="$XDG_CONFIG_HOME"/bash/sources
+  [ -d "$srcs" ] && source_files_in_directory "$srcs"
+}
+
+source_directory
+unset -f source_directory source_files_in_directory
+
+source /usr/share/bash-completion/completions/git
+__git_complete config __git_main
+
+PS1='[\u@\h \W]\$ '
+

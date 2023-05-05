@@ -1,0 +1,46 @@
+floating_modifier mod4 normal
+
+bindsym mod4+escape kill
+
+bindsym mod4+tab focus next
+bindsym mod4+shift+tab focus prev
+
+bindsym mod4+minus workspace prev
+bindsym mod4+equal workspace next
+bindsym mod4+shift+minus move container to workspace prev
+bindsym mod4+shift+equal move container to workspace next
+
+bindsym mod4+f1 layout tabbed
+bindsym mod4+f2 layout toggle
+bindsym mod4+f3 floating toggle
+bindsym mod4+f4 mode "resize"
+bindsym mod4+f5 splith
+bindsym mod4+f6 focus mode_toggle
+bindsym mod4+f7 focus parent
+bindsym mod4+f8 scratchpad show
+bindsym mod4+f9 move scratchpad
+bindsym mod4+f10 reload
+bindsym mod4+f11 fullscreen
+bindsym mod4+f12 exit
+
+bindsym mod4+shift+f1 layout stacking
+bindsym mod4+shift+f5 splitv
+
+bindsym mod4+h focus left
+bindsym mod4+j focus down
+bindsym mod4+k focus up
+bindsym mod4+l focus right
+bindsym mod4+left focus left
+bindsym mod4+down focus down
+bindsym mod4+up focus up
+bindsym mod4+right focus right
+
+bindsym mod4+shift+h move left
+bindsym mod4+shift+j move down
+bindsym mod4+shift+k move up
+bindsym mod4+shift+l move right
+bindsym mod4+shift+left move left
+bindsym mod4+shift+down move down
+bindsym mod4+shift+up move up
+bindsym mod4+shift+right move right
+

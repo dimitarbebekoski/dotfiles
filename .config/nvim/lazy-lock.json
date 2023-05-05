@@ -1,0 +1,7 @@
+{
+  "clangd_extensions.nvim": { "branch": "main", "commit": "798e377ec859087132b81d2f347b5080580bd6b1" },
+  "lazy.nvim": { "branch": "main", "commit": "57cce98dfdb2f2dd05a0567d89811e6d0505e13b" },
+  "nvim-gdb": { "branch": "master", "commit": "9a6adc688bf9acf1628b014d2c7217443dd6fa6f" },
+  "nvim-lspconfig": { "branch": "master", "commit": "6fe69025b8825029ea9bf291ab3b1750f9bcb39e" },
+  "nvim-treesitter": { "branch": "master", "commit": "ac4020c70722337c326bf65b645b162ee6e1796b" }
+}

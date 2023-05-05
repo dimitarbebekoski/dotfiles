@@ -1,0 +1,19 @@
+bindsym --locked --no-repeat xf86audioplay exec playerctl play-pause
+bindsym --locked --no-repeat xf86audiopause exec playerctl stop
+bindsym --locked --no-repeat xf86audiostop exec playerctl stop
+bindsym --locked --no-repeat xf86audioprev exec playerctl previous
+bindsym --locked --no-repeat xf86audionext exec playerctl next
+bindsym --locked --no-repeat xf86audiomute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym --locked xf86audioraisevolume exec pactl set-sink-volume @DEFAULT_SINK@ +3%
+bindsym --locked xf86audiolowervolume exec pactl set-sink-volume @DEFAULT_SINK@ -3%
+
+bindsym --locked xf86audiolowervolume+shift exec playerctl volume 0.03-
+bindsym --locked xf86audioraisevolume+shift exec playerctl volume 0.03+
+bindsym --locked xf86audioprev+shift exec playerctl position 5-
+bindsym --locked xf86audionext+shift exec playerctl position 5+
+
+bindsym --no-repeat print exec grim - | wl-copy
+bindsym --no-repeat print+shift exec grim -g "$(slurp)" - | wl-copy
+bindsym --no-repeat print+mod4 exec grim
+bindsym --no-repeat print+mod4+shift exec grim -g "$(slurp)"
+

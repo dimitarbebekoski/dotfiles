@@ -1,0 +1,41 @@
+input type:touchpad {
+  tap enabled
+    natural_scroll enabled
+    middle_emulation enabled
+    dwt enabled
+}
+
+input type:keyboard {
+  repeat_delay 300
+    repeat_rate 50
+}
+
+input "1:1:AT_Translated_Set_2_keyboard" {
+  xkb_numlock enabled
+    xkb_layout us,si,mk
+    xkb_options grp:win_space_toggle,caps:swapescape
+}
+
+for_window [class="FreeTube|Popcorn-Time"] inhibit_idle fullscreen
+for_window [class="Pcmanfm|Tor Browser|mpv|xev|scrcpy"] floating enable
+for_window [class="Tor Browser"] resize set 1300 685
+
+assign [app_id="Alacritty"] 1
+assign [app_id="firefox|Tor Browser"] 2
+assign [app_id="mpv"] 3
+assign [app_id="thunderbird"] 4
+
+workspace_layout tabbed
+
+default_border none
+default_floating_border none
+titlebar_border_thickness 0
+titlebar_padding 0
+font pango:monospace 0
+
+exec swayidle -w timeout 300 'swaylock -f' timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' before-sleep 'swaylock -f'
+exec thunderbird
+
+include ./*/*
+include /etc/sway/config.d/*
+
